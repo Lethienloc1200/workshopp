@@ -1,9 +1,12 @@
 import React from 'react';
-import "./TongCong.css";
+import "./css/TongCong.css";
 import CurrencyFormat from "react-currency-format"
 import { useStateValue } from "./StateProvider";
 import { NhanTongGioHang } from './reducer';
+import { useHistory } from "react-router-dom";
+
 function TongCong() {
+  const history = useHistory();
   const[{basket}, dispatch] = useStateValue();
 
     return (
@@ -27,7 +30,7 @@ function TongCong() {
         prefix={"$"}
       />
 
-      <button>Proceed to Checkout</button>
+      <button onClick ={ e => history.push('/payment')}>Thanh toán</button>
     </div>
     )
 }

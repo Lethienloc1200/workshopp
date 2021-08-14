@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Login.css";
+import "./css/Login.css";
 import { Link, useHistory } from "react-router-dom";
 import { auth } from "./firebase";
 
@@ -39,12 +39,12 @@ function Login() {
       <Link to="/">
         <img
           className="login__logo"
-          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Amazon_logo.svg/1024px-Amazon_logo.svg.png"
+          src="https://e7.pngegg.com/pngimages/996/491/png-clipart-shopify-e-commerce-logo-web-design-design-web-design-logo.png"
         />
       </Link>
 
       <div className="login__container">
-        <h1>Sign-in</h1>
+        <h1>Đăng nhập</h1>
 
         <form>
           <h5>E-mail</h5>
@@ -54,7 +54,7 @@ function Login() {
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <h5>Password</h5>
+          <h5>Mật khẩu</h5>
           <input
             type="password"
             value={password}
@@ -66,18 +66,16 @@ function Login() {
             onClick={signIn}
             className="login__signInButton"
           >
-            Sign In
+            Đăng nhập
           </button>
         </form>
 
         <p>
-          By signing-in you agree to the AMAZON FAKE CLONE Conditions of Use &
-          Sale. Please see our Privacy Notice, our Cookies Notice and our
-          Interest-Based Ads Notice.
+  
         </p>
 
         <button className="login__registerButton" onClick={register}>
-          Create your Amazon Account
+          Tạo một tài khoản
         </button>
       </div>
     </div>

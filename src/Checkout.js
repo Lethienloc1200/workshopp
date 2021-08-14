@@ -1,5 +1,5 @@
 import React from "react";
-import "./Checkout.css";
+import "./css/Checkout.css";
 import TongCong from "./TongCong";
 import { useStateValue } from "./StateProvider";
 import CheckoutProduct from "./CheckoutProduct";

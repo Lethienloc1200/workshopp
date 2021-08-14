@@ -1,5 +1,5 @@
 import React from "react";
-import "./Home.css";
+import "./css/Home.css";
 import Product from "./Product";
 
 function Home() {
@@ -8,7 +8,7 @@ function Home() {
       <div className="home__container">
         <div
           id="carouselExampleControls"
-          class="carousel slide"
+          className="carousel slide"
           data-ride="carousel"
         >
           <div className="carousel-inner">

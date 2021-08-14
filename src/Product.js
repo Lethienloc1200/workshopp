@@ -1,5 +1,5 @@
 import React from "react";
-import "./Product.css";
+import "./css/Product.css";
 import { useStateValue } from "./StateProvider";
 
 function Product({ id, title, image, price, rating }) {
@@ -19,7 +19,7 @@ function Product({ id, title, image, price, rating }) {
       },
     });
   };
-  return (
+  return ( 
     <div className="product">
       <div className="product__info">
         <p>{title}</p>
@@ -31,7 +31,7 @@ function Product({ id, title, image, price, rating }) {
           {Array(rating)
             .fill()
             .map((ff, ui) => (
-              <p>🌟</p>
+              <p >🌟</p>
             ))}
         </div>
       </div>
