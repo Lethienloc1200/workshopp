@@ -1,50 +1,43 @@
 import React, { Component } from 'react';
-import ProductItem from '../../components/ProducItem';
-import ProductList from "../../components/ProductList" 
+import HomeList from '../../components/HomeList';
+import HomeItem from "../../components/HomeItem" 
 import {connect} from 'react-redux';
-import {Link } from "react-router-dom";
-import  {actFetchProductsRequest,actDeleteProductRequest,actAddToCart,actChangeMessage} from './../../actions/index';
+// import {Link } from "react-router-dom";
+import  {actFetchProductsRequest} from '../../actions/index';
+import { actAddToCart, actChangeMessage } from '../../actions/index';
 
-class ProductListPage extends Component {
+class HomePage extends Component {
 
     componentDidMount() {
         this.props.fetchAllProducts();
     }
- 
-    
-    onDelete = (id) => {
- 
-        this.props.onDeleteProduct(id);
-        
-    }
-   
-
 
     render() {
 
         var { products }  = this.props;
 
         return (
-            <div className="container-fluid">
-           <div className="col-sm-11 mx-auto">
-             <Link to="/product/add"><button className="btn btn-info my-3">Thêm sản phẩm</button></Link>  
-               <ProductList>
+         
+           <div className="">
+               <HomeList >
                    {this.showProducts(products)}
-               </ProductList>
+               </HomeList>
            </div>
-        </div>
+     
         );
     }
     showProducts(products){
             var result = null;
+            var { onAddToCart ,onChangeMessage} = this.props;
             if(products.length > 0){
                 result = products.map((product,index)=>{
                     return (
-                        <ProductItem
+                        <HomeItem
                         key={index}
                         product={product}
                         index={index}
-                        onDelete={this.onDelete}
+                        onAddToCart = {onAddToCart} 
+                        onChangeMessage = {onChangeMessage}
                         />
                     );
                 });
@@ -63,16 +56,13 @@ const mapDispatchToProps = (dispatch, props) =>{
         fetchAllProducts : () => { 
             dispatch(actFetchProductsRequest());
         },
-
-        onDeleteProduct : (id) => { 
-            dispatch(actDeleteProductRequest(id));
-        },
         onAddToCart: (product) => {
             dispatch(actAddToCart(product, 1));
         },
         onChangeMessage : (message) => {
             dispatch(actChangeMessage(message));
         }
+
      }
 }
-export default connect(mapStateToProps, mapDispatchToProps) (ProductListPage);
+export default connect(mapStateToProps, mapDispatchToProps) (HomePage);

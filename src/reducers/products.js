@@ -14,7 +14,8 @@ var findIndex = (products, id) => {
 
 const products = (state = initialState, action) => {
   var index = -1;
-  var { id,product } = action;
+
+  var { id,product} = action;
   switch (action.type) {
     case Types.FETCH_PRODUCTS:
       state = action.products;
@@ -28,10 +29,12 @@ const products = (state = initialState, action) => {
     case Types.ADD_PRODUCT:
       state.push(action.product);
       return [...state];
-      case Types.UPDATE_PRODUCT:
+      
+    case Types.UPDATE_PRODUCT:
         index = findIndex(state, product.id);
         state[index] = product;
         return [...state];
+
     default:
       return [...state];
   }

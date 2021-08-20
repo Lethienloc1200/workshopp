@@ -1,11 +1,10 @@
 import React, { Component } from "react";
-import ProductItem from "./ProducItem";
 import "../css/ProductList.css"
 
 class QuanLySP extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="container-fluid">
         <div className="panel panel-primary border border-primary border-5 rounded">
           <div className="panel-heading">
             <h3 className="panel-title mb-4  bg-primary ">Danh Sách Sản Phẩm</h3>
@@ -14,12 +13,14 @@ class QuanLySP extends Component {
             <table className="table table-bordered table-hover">
               <thead>
                 <tr>
-                  <th>STT</th>
-                  <th>Mã</th>
-                  <th>Tên</th>
-                  <th>Giá</th>
-                  <th>Trạng Thái</th>
-                  <th>Hành Động</th>
+                  <th className="stt">STT</th>
+                  <th className="stt">Mã</th>
+                  <th className="stt__Ten">Tên</th>
+                  <th className="stt__MoTa">Mô tả</th>
+                  <th className="stt__HinhAnh">Hình ảnh</th>
+                  <th className="stt__Gia">Giá</th>
+                  <th className="stt__TrangThai">Trạng Thái</th>
+                  <th className="stt__HanhDong">Hành Động</th>
                 </tr>
               </thead>
               <tbody>

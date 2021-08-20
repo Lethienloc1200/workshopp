@@ -18,15 +18,19 @@
 
 .checkoutProduct__image {
     object-fit: contain;
-    width: 180px;
-    height: 180px;
-  }
+    width: 202px;
+    height: 237px;
+   }
 
 .checkoutProduct__rating {
     display: flex;
   }
 
 .checkoutProduct__title {
+    font-size: 17px;
+    font-weight: 500;
+}
+.checkoutProduct__title-content{
     font-size: 17px;
     font-weight: 800;
 }

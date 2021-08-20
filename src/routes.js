@@ -1,14 +1,18 @@
 import React from "react";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
 import Header from "./Header";
-import Home from "./Home";
+// import Home from "./Home";
 import Footer from "./Footer";
 import Payment from "./Payment";
-import Checkout from "./Checkout";
+// import Checkout from "./Checkout";
 import Login from "./Login";
 import ProductListPage from "./pages/ProductListPage/ProductListPage";
 import ProductActionPage from "./pages/ProductActionPage/ProductActionPage";
-
+import ProductDetail from "./ProductDetail";
+import HomePage from "./pages/HomePage/HomePage";
+import ProductDetailPage from "./pages/ProductDetailPage/ProductDetailPage";
+import MessageContainer from './containers/MessageContainer';
+import CartContainer from "./containers/CartContainer";
 
 
 const routes = [
@@ -18,7 +22,7 @@ const routes = [
     main: () => (
       <div>
         <Header />
-        <Home />
+      <HomePage/>
         <Footer />
       </div>
     ),
@@ -51,9 +55,10 @@ const routes = [
     main: () => (
       <div>
         <Header />
-        <Checkout />
+        <MessageContainer />
+        <CartContainer />
         <Footer />
-      </div>
+      </div>  
     ),
   },
   {
@@ -78,6 +83,19 @@ const routes = [
     main: ({match,history}) => (
      <ProductActionPage match={match} history ={history} />
     ),
+  },
+
+  {
+    path: "/product/:id/detail",
+    exact: false,
+    main: ({match}) => (
+      <div>
+      <Header />
+   <ProductDetailPage match ={match}/>
+      <Footer />
+    </div>
+   
+    )
   },
 
   //không tìm thấy

@@ -10,8 +10,10 @@ class ProductActionPage extends Component {
     this.state = {
       id: "",
       txtName: "",
+      txtDescription: "",
+      txtImage: "",
       txtPrice: "",
-      chkbStatus: "",
+      chkbStatus: ""
     };
   }
   onChange = (e) => {
@@ -25,35 +27,26 @@ class ProductActionPage extends Component {
 
   onSave = (e) => {
     e.preventDefault();
-    var { id, txtName, txtPrice, chkbStatus } = this.state;
+    var { id, txtName, txtPrice,txtDesciption,txtImage, chkbStatus } = this.state;
     var { history } = this.props;
     var product = {
       id :id,
       name:txtName,
+      descript:txtDesciption,
+      image:txtImage,
       price: txtPrice,
       status: chkbStatus
+      
     };
 
     if (id) {
       //nếu có id thì update
-      // callApi(`products/${id}`, "PUT", {
-      //   name: txtName,
-      //   price: txtPrice,
-      //   status: chkbStatus,
-      // }).then((res) => {
-      //   history.goBack();
-      // });
+
       this.props.onUpdateProduct(product);
       history.goBack();
     } else {
       //==> Thêm sản phẩm
-      // callApi("products", "POST", {
-      //   name: txtName,
-      //   price: txtPrice,
-      //   status: chkbStatus
-      // }).then((res) => {
-      //   history.goBack();
-      // });
+      
       this.props.onAddProduct(product);
       history.goBack();
     }
@@ -63,15 +56,6 @@ class ProductActionPage extends Component {
     var { match } = this.props;
     if (match) {
       var id = match.params.id;
-      // callApi(`products/${id}`, "GET", null).then((res) => {
-      //   var data = res.data;
-      //   this.setState({
-      //     id: data.id,
-      //     txtName: data.name,
-      //     txtPrice: data.price,
-      //     chkbStatus: data.status,
-      //   });
-      // });
 
       this.props.onEditProduct(id);
     }
@@ -82,6 +66,8 @@ class ProductActionPage extends Component {
         this.setState({
             id : itemEditing.id,
             txtName : itemEditing.name,
+            txtDescription : itemEditing.descript,
+            txtImage : itemEditing.image,
             txtPrice : itemEditing.price,
             chkbStatus : itemEditing.status
         });
@@ -91,7 +77,7 @@ class ProductActionPage extends Component {
 
 
   render() {
-    var { txtName, txtPrice, chkbStatus } = this.state;
+    var { txtName, txtPrice,txtDescription,txtImage, chkbStatus } = this.state;
     return (
       <div className="container">
         <div className="col-sm-12">
@@ -110,6 +96,31 @@ class ProductActionPage extends Component {
                 placeholder="Nhập vào tên Sản Phẩm"
               />
             </div>
+{/* //mô tả */}
+            <div className="form-group">
+              <label for="">Mô tả sản phẩm</label>
+              <input
+                type="text"
+                name="txtDescription"
+                value={txtDescription}
+                onChange={this.onChange}
+                className="form-control"
+                placeholder="Nhập vào  mô tả Sản Phẩm"
+              />
+            </div>
+        
+            <div className="form-group">
+              <label for="">Hình ảnh</label>
+              <input
+                type="text"
+                name="txtImage"
+                value={txtImage}
+                onChange={this.onChange}
+                className="form-control"
+                placeholder="Nhập vào link ảnh Sản Phẩm"
+              />
+            </div>
+
             <div className="form-group">
               <label for="">Giá</label>
               <input

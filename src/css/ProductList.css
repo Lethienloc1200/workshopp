@@ -1,3 +1,36 @@
 button.btn.btn-info.my-3 {
     margin-left: 15px;
 }
+th.stt__MoTa {
+    width: 30%;
+}
+th.stt__Ten {
+    width: 10%;
+   top: 50%;
+}
+th.stt__HinhAnh {
+    width: 500px;
+}
+th.stt__TrangThai {
+    width: 150px;
+}
+th.stt__Gia {
+    width: 170px;
+}
+th.stt__HanhDong {
+    width: 190px;
+}
+
+td.stt__Ten {
+    vertical-align: middle;
+    /* cách 2 */
+    /* top:50%; */
+    /* transform: translateY(-50%.-50%); */
+}
+
+.stt__img{
+    width: 100%  ;
+      height: 297px;
+    background-position: center center;
+    background-size: cover;
+}

@@ -1,0 +1,22 @@
+.product__info {
+    text-align: left;
+
+    margin-bottom: 15px;
+    width: 90%;
+    min-width: 80%;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.product__rating {
+    text-align: right;
+ 
+    min-width:95%;
+    width:100%;
+    /* background-color: red; */
+
+  margin-top: -30px;
+
+
+
+}

@@ -15,16 +15,18 @@ class ProductItem extends Component {
         var statusClass = product.status ? 'bg-primary rounded' : 'rounded bg-warning';
         return (
             <tr>
-                <td>{index + 1}</td>
+                <td>{index + 1}</td> 
                 <td>{product.id}</td>
-                <td>{product.name}</td>
-                <td>{product.price}</td>
-                <td className="mx-autoo">
+                <td className="stt__Ten"><b>{product.name}</b></td>
+                <td className="stt__Ten">{product.descript}</td>
+                <td className="www"><img className="stt__img" src= {`${product.image}`}  alt=""/> </td>
+                <td className="stt__Ten"><b>{product.price} vnd</b></td>
+                <td className="mx-autoo stt__Ten">
                     <span className={`padding-10 ${statusClass}`}>
                         {statusName}
                     </span>
                 </td>
-                <td>
+                <td className="stt__Ten">
                     <Link
                         to={`/product/${product.id}/edit`}
                         className="btn btn-success mr-10"

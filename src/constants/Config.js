@@ -1,1 +1,1 @@
-export const API_URL ='http://localhost:3000';
+export const API_URL ='https://6117f37b30022f0017a06032.mockapi.io';

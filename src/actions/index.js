@@ -46,7 +46,7 @@ export const actAddProduct = (product) => {
         product
     }
 }
-//====edit
+//====edit==> lấy id để hiển thị sửa xem chi tiết
 export const actGetProductRequest = (id) => {
     return dispatch => {
         return callApi(`products/${id}`, 'GET', null).then(res => {
@@ -77,5 +77,36 @@ export const actUpdateProduct = (product) => {
     return {
         type : Types.UPDATE_PRODUCT,
         product
+    }
+}
+
+
+// ===================Theem vaof gio hang===========
+export const actAddToCart = (product, quantity) => {
+    return {
+        type: Types.ADD_TO_CART,
+        product,
+        quantity
+    }
+}
+export const actChangeMessage = (message) => {
+    return {
+        type: Types.CHANGE_MESSAGE,
+        message
+    }
+}
+
+export const actDeleteProductInCart = (product) => {
+    return {
+        type : Types.DELETE_PRODUCT_IN_CART,
+        product
+    }
+}
+
+export const actUpdateProductInCart = (product, quantity) => {
+    return {
+        type : Types.UPDATE_PRODUCT_IN_CART,
+        product,
+        quantity
     }
 }
