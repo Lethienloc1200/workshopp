@@ -38,10 +38,10 @@ class CartItem extends Component{
                    
                 </div> 
                 <p className='checkoutProduct__title'>Giá: {item.product.price} vnd</p>
-                <td> Tổng tiền : {this.showSubTotal(item.product.price, item.quantity)}$</td>
+                <td className="tongtien"> Tổng tiền : {this.showSubTotal(item.product.price, item.quantity)}$</td>
                 
                 
-                    <button onClick={() => this.onDelete(item.product)}>Xóa khỏi giỏ hàng</button>
+                    <button className="xoa_gio_hang" onClick={() => this.onDelete(item.product)}>Xóa khỏi giỏ hàng</button>
                 
             </div>
             <hr/>

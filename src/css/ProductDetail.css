@@ -1,21 +1,13 @@
 
-
-
 body {
     background-color: #eee;
     font-family: "Poppins", sans-serif
 }
-
 .card {
     background-color: #fff;
     padding: 14px;
     border: none
 }
-
-/* .demo {
-    width: 100%
-} */
-
 ul {
     list-style: none outside none;
     padding-left: 0;
@@ -28,18 +20,14 @@ li {
     margin-right: 6px;
     cursor: pointer
 }
-
 img {
     display: block;
     height: auto;
     width: 100%
 }
-
 .profile-image {
     width: 35px
 }
-
-
 .date span {
     font-size: 12px
 }
@@ -48,14 +36,9 @@ img {
     color: #f6d151
 }
 
-
-
-
-
 label.radio {
     cursor: pointer
 }
-
 label.radio input {
     position: absolute;
     top: 0;
@@ -63,7 +46,6 @@ label.radio input {
     visibility: hidden;
     pointer-events: none
 }
-
 label.radio span {
     border: 2px solid #8f37aa;
     display: inline-block;

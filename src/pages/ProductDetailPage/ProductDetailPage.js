@@ -1,13 +1,13 @@
 import React, { Component } from "react";
-import callApi from "../../utils/apiCaller";
-import { Route, Link } from "react-router-dom";
+// import callApi from "../../utils/apiCaller";
+// import { Route, Link } from "react-router-dom";
 import {
   actAddProductRequest,
   actGetProductRequest,actAddToCart
 } from "./../../actions/index";
 import { connect } from "react-redux";
-import HomeItem from "../../components/HomeItem";
-import HomePage from "../HomePage/HomePage";
+// import HomeItem from "../../components/HomeItem";
+// import HomePage from "../HomePage/HomePage";
 
 
 class ProductDetail extends Component {
@@ -102,7 +102,7 @@ class ProductDetail extends Component {
                 <hr />
                 {/* //======Mô tả sản phẩm */}
                 <h4>Trạng thái </h4>
-                <h5 className="margin-left-50"> ----- {statusName}</h5>
+                <h5 className="margin-left-50">{statusName}</h5>
                 <div className="product-description">
                   <div>
                     <span className="font-weight-bold">Color:</span>
@@ -227,32 +227,32 @@ class ProductDetail extends Component {
                   <div className="card border p-1">
                     <img src="https://i.imgur.com/KZpuufK.jpg" alt="..." />
 
-                    <h6 className="card-title">$1,999</h6>
+                    <h6 className="card-title">799000000 vnd</h6>
                   </div>
                   <div className="card border p-1">
-                    <img src="https://i.imgur.com/KZpuufK.jpg" alt="..." />
+                    <img src="https://m.media-amazon.com/images/I/71LJJrKbezL._AC_UL480_FMwebp_QL65_.jpg" alt="..." />
 
-                    <h6 className="card-title">$1,999</h6>
+                    <h6 className="card-title">456000000 vnd</h6>
                   </div>
                   <div className="card border p-1">
-                    <img src="https://i.imgur.com/KZpuufK.jpg" alt="..." />
+                    <img src="https://m.media-amazon.com/images/I/71Ao8Im97TL._AC_UL480_FMwebp_QL65_.jpg" alt="..." />
 
-                    <h6 className="card-title">$1,999</h6>
+                    <h6 className="card-title">8529000000 vnd</h6>
                   </div>
                   <div className="card border p-1">
-                    <img src="https://i.imgur.com/KZpuufK.jpg" alt="..." />
+                    <img src="https://m.media-amazon.com/images/I/81Vtb-0K3-L._AC_UY327_FMwebp_QL65_.jpg" alt="..." />
 
-                    <h6 className="card-title">$1,999</h6>
+                    <h6 className="card-title">763000000 vnd</h6>
                   </div>
                   <div className="card border p-1">
-                    <img src="https://i.imgur.com/KZpuufK.jpg" alt="..." />
+                    <img src="https://m.media-amazon.com/images/I/51q7Td1wWUL._AC_UY327_FMwebp_QL65_.jpg" alt="..." />
 
-                    <h6 className="card-title">$1,999</h6>
+                    <h6 className="card-title">159000000 vnd</h6>
                   </div>
                   <div className="card border p-1">
-                    <img src="https://i.imgur.com/KZpuufK.jpg" alt="..." />
+                    <img src="https://m.media-amazon.com/images/I/71URNvzoWqL._AC_UY327_FMwebp_QL65_.jpg" alt="..." />
 
-                    <h6 className="card-title">$1,999</h6>
+                    <h6 className="card-title">79789000000 vnd</h6>
                   </div>
                 </div>
                 {/* //====hết sản phẩm========== */}

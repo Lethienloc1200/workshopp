@@ -27,12 +27,12 @@ class ProductActionPage extends Component {
 
   onSave = (e) => {
     e.preventDefault();
-    var { id, txtName, txtPrice,txtDesciption,txtImage, chkbStatus } = this.state;
+    var { id, txtName, txtPrice,txtDescription,txtImage, chkbStatus } = this.state;
     var { history } = this.props;
     var product = {
       id :id,
       name:txtName,
-      descript:txtDesciption,
+      descript:txtDescription,
       image:txtImage,
       price: txtPrice,
       status: chkbStatus
@@ -124,7 +124,7 @@ class ProductActionPage extends Component {
             <div className="form-group">
               <label for="">Giá</label>
               <input
-                type="text"
+                type="number"
                 name="txtPrice"
                 value={txtPrice}
                 onChange={this.onChange}

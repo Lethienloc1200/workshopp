@@ -25,8 +25,8 @@ class ProductListPage extends Component {
         var { products }  = this.props;
 
         return (
-            <div className="container-fluid">
-           <div className="col-sm-11 mx-auto">
+            <div className="containe">
+           <div className="col-sm-12 mx-auto">
              <Link to="/product/add"><button className="btn btn-info my-3">Thêm sản phẩm</button></Link>  
                <ProductList>
                    {this.showProducts(products)}

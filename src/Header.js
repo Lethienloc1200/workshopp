@@ -30,55 +30,66 @@ function Header() {
   ];
 
   return (
-    <div className="containerr">
-      <div className="header">
-        <Link to="/">
-          <img
-            className="header__logo"
-            src="https://e7.pngegg.com/pngimages/996/491/png-clipart-shopify-e-commerce-logo-web-design-design-web-design-logo.png"
-            alt="logo"
-          />
-        </Link>
-
-        <div className="header__search">
-          <input className="header__searchInput" type="text" />
-          <SearchIcon className="header__searchIcon" />
-        </div>
-
-        <div className="header__nav">
-          <Link to="/QLSP">
-            <div className="header__option mr-5">
-              <span className="header__optionLineOne">
-                <i className="fas fa-tasks size-big"></i>{" "}
-              </span>
-              <span className="header__optionLineTwo hoverHeader">
-                Quản Lý sản phẩm
-              </span>
-            </div>
+    <div className="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top menutren heade__box">
+        <div class="container-fluid toogle-box ">
+          <Link to="/">
+            <img
+            // class="navbar-toggler"
+            data-target="#my-nav"
+            data-toggle="collapse"
+            aria-label="Toggle navigation"
+              className="header__logo"
+              src="https://e7.pngegg.com/pngimages/996/491/png-clipart-shopify-e-commerce-logo-web-design-design-web-design-logo.png"
+              alt="logo"
+            />
           </Link>
+          <div className="header__search">
+            <input className="header__searchInput" type="text" />
+            <SearchIcon className="header__searchIcon" />
+          </div>
+    
+      
+          <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav float-sm-right menuphai">
+              <li class="nav-item">
+                <Link to="/QLSP">
+                  <div className="quan__ly">
+                    <h4 className="quan__ly__text">Quản lý </h4>
+                  </div>
+                </Link>
+              </li>
+              
+              <li class="nav-item gio__hang">
+                <Link to="/checkout">
+                  <AddShoppingCartIcon />
+                   <span className="gio__hang_text ml-1 ">Giỏ hàng</span>
+                </Link>
+              </li>
 
-          <Link to={!user && "/login"}>
-            <div onClick={hanleAuthenticaton} className="header__option ">
-              <span className="header__optionLineOne">
-                Hello {!user ? "Guest" : user.email}
-              </span>
-              <span className="header__optionLineTwo hoverHeader">
-                {user ? "Đăng xuất" : "Đăng nhập"}
-              </span>
-            </div>
-          </Link>
-
-          <div className="header__optionBasket">
-            <Link to="/checkout">
-              <AddShoppingCartIcon />
-            </Link>
-
-            <span className="header__optionLineTwo header__basketCount">
-              Giỏ Hàng
-            </span>
+              <li class="nav-item">
+              <Link to="/checkout">
+                 
+                  </Link>
+              </li>
+              <li class="nav-item">
+                <Link to={!user && "/login"}>
+                  <div onClick={hanleAuthenticaton} className="header__option ">
+                   <i> <span className=" gio__hang_text">
+                      Hello {!user ? "Guest" : user.email}
+                    </span></i>
+                    <h4 className=" quan__ly__text">
+                      {user ? "Đăng xuất" : "Đăng nhập"}
+                    </h4>
+                  </div>
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
+      </nav>
+      
+     
       <div className=" border border-primary"></div>
       {/* ===============nav============ */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -360,121 +371,16 @@ function Header() {
                   </li>
                 </ul>
               </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDarkDropdownMenuLink"
-                  role="button"
-                  data-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Ô tô, xe máy
-                </a>
-                <ul
-                  className="dropdown-menu dropdown-menu-dark"
-                  aria-labelledby="navbarDarkDropdownMenuLink"
-                >
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      i phone
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Samsum
-                    </a>
-                  </li>
-                  <li>
-                    <a className="dropdown-item" href="#">
-                      Appo
-                    </a>
-                  </li>
-                </ul>
-              </li>
+           
             </ul>
           </div>
         </div>
       </nav>
       {/* ================== */}
-      {/* <ul
-       class="collapse" id="collapseExample"
-      >
-        <li>
-          <div className="logo-wrapper waves-light waves-effect waves-light">
-            <a>
-              <img
-                src="http://mdbootstrap.com/img/logo/mdb-transparent.png"
-                alt=""
-                className="img-fluid flex-center"
-              />
-            </a>
-          </div>
-        </li>
 
-        <li>
-          <ul className="collapsible collapsible-accordion">
-            <li>
-              <a className="collapsible-header waves-effect arrow-r">
-                <i className="fa fa-shopping-bag" /> Product Page
-                <i className="fa fa-angle-down rotate-icon" />
-              </a>
-              <div className="collapsible-body">
-                <ul>
-                  <li>
-                    <a href="product.html" className="waves-effect">
-                      Product Page V.1
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-            <li className="active">
-              <a className="collapsible-header waves-effect arrow-r active">
-                <i className="fa fa-shopping-cart" /> Cart Pages
-                <i className="fa fa-angle-down rotate-icon" />
-              </a>
-              <div className="collapsible-body">
-                <ul>
-                  <li>
-                    <a href="cart.html" className="waves-effect">
-                      Page with shopping cart
-                    </a>
-                  </li>
-                  <li>
-                    <a href="contact.html" className="waves-effect">
-                      Page with contact form
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </li>
-
-        <div class="sidenav-bg mask-strong"></div>
-
-        <div class="ps__scrollbar-x-rail">
-          <div class="ps__scrollbar-x" tabIndex="0"></div>
-        </div>
-        <div class="ps__scrollbar-y-rail">
-          <div class="ps__scrollbar-y" tabIndex="0"></div>
-        </div>
-      </ul>
-      <nav class="navbar fixed-top navbar-toggleable-md navbar-expand-lg navbar-dark scrolling-navbar double-nav">
-
-                <div class="float-left">
-                    <a data-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-                        <i class="fa fa-bars"></i>
-                    </a>
-                </div>
-
-
-        </nav> */}
 
       <div className="border border-warning"></div>
     </div>
-    
   );
 }
 

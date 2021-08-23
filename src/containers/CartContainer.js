@@ -14,8 +14,8 @@ class CartContainer extends Component {
     return (
       <Cart>
         <div className="row">
-          <div className="col-sm-8">{this.showCartItem(cart)}</div>
-          <div className="col-sm-4">{this.showTotalAmount(cart)}</div>
+          <div className="col-md-8 col-sm-12">{this.showCartItem(cart)}</div>
+          <div className="col-md-4 col-sm-12">{this.showTotalAmount(cart)}</div>
         </div>
       </Cart>
     );

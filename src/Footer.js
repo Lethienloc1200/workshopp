@@ -1,7 +1,6 @@
 // rfce//
 import React from "react";
 import "./css/Footer.css";
-import { Link } from "react-router-dom";
 
 
 function Footer() {
@@ -11,23 +10,22 @@ function Footer() {
 <footer className="footer">
 <div className="container bottom_border">
 <div className="row">
-<div className=" col-sm-4 col-md col-sm-4  col-12 col">
+<div className="col-sm-4 col-12">
 <h5 className="headin5_amrc col_white_amrc pt2">HỖ TRỢ KHÁCH HÀNG</h5>
-{/* <!--                    c--> */}
-<p className="mb10">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
-<p><i className="fa fa-location-arrow"></i>  02/54 An Dương Vương - Quy Nhơn </p>
-<p><i className="fa fa-phone"></i>  + 0388502719  </p>
-<p><i className="fa fa fa-envelope"></i>   Lethienloc1200@gmail.com  </p>
+<p className="mb10  p__nhon">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p>
+<p className="p__nhon"><i className="fa fa-location-arrow"></i>  02/54 An Dương Vương - Quy Nhơn </p>
+<p  className="p__nhon"><i className="fa fa-phone"></i>  + 0388502719  </p>
+<p  className="p__nhon"><i className="fa fa fa-envelope"></i>   Lethienloc1200@gmail.com  </p>
 
 
 </div>
 
 
-<div className=" col-sm-4 col-md  col-6 col">
+<div className="col-sm-4  col-6 col">
 <h5 className="headin5_amrc col_white_amrc pt2">Giới thiệu</h5>
 {/* <!--==========================--> */}
 <ul className="footer_ul_amrc">
-<li><a href="http://facebook.com/lethienloc1200">Giới thiệu SHOP</a></li>
+<li  className="p__nhonnn"><a href="http://facebook.com/lethienloc1200">Giới thiệu SHOP</a></li>
 <li><a href="http://facebook.com/lethienloc1200">Tuyển dụng</a></li>
 <li><a href="http://facebook.com/lethienloc1200">Chính sách bảo mật</a></li>
 <li><a href="http://facebook.com/lethienloc1200">Bán hàng doanh nghiệp</a></li>
@@ -40,19 +38,19 @@ function Footer() {
 </div>
 
 
-<div className=" col-sm-4 col-md  col-6 col">
+<div className="col-sm-4 col-6 col">
 <h5 className="headin5_amrc col_white_amrc pt2">Hợp tác liên kết</h5>
 {/* <!--headin5_amrc--> */}
 <ul className="footer_ul_amrc">
-<li><a href="http://webenlance.com">Công ty trách nhiệm ABC</a></li>
-<li><a href="http://webenlance.com"> ACS COMPANY</a></li>
+<li><a href="http://face.com">Công ty trách nhiệm ABC</a></li>
+<li><a href="http://face.com"> ACS COMPANY</a></li>
 
 </ul>
 {/* <!--=======================e--> */}
 </div>
 
 
-<div className=" col-sm-4 col-md  col-12 col">
+<div className="col-sm-4  col-12 col">
 <h5 className="headin5_amrc col_white_amrc pt2">Follow us</h5>
 
 

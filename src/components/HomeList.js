@@ -7,7 +7,7 @@ class HomeList extends Component {
   render (){
     return(
     <div className="home">
-        <div className="container-fluid">
+        {/* <div className="container-fluid"> */}
         {/* ===slide========= */}
         <div
           id="carouselExampleControls"
@@ -65,21 +65,21 @@ class HomeList extends Component {
         </div>
 {/* Hết caroseld */}
 
-        <div className="home__row ">
-         <div className="row mx-auto">
-           <div className="col-sm-12 ">
+        {/* <div className="home__row "> */}
+         {/* <div className="row mx-auto"> */}
+           {/* <div className="col-sm-12 "> */}
           
                  {this.props.children}
 
          
-           </div>
+           {/* </div> */}
        
           
-         </div>
-        </div>
+         {/* </div> */}
+        {/* </div> */}
 
       </div>
-    </div>
+    // </div>
     
     );
   }

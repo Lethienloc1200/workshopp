@@ -9,12 +9,12 @@ class Cart extends Component {
     var { children } = this.props;
     return (
       <div className="checkout">
-        <div className="container-fluid ">
+        <div className="container-fluid cart-edit">
          
               {/* <h2 className="btn btn-primary mx-3 my-3">
                 <b>hé lô</b>
               </h2> */}<p className="mt-3 mb-3">...</p>
-            <div className="GioHangCuaBan ml-5 ">
+            <div className="GioHangCuaBan ">
              
               <h2 className="GioHang"> Giỏ hàng của bạn</h2>
               <div className="border border-primary border-1"></div>

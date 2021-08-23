@@ -47,15 +47,15 @@ function Login() {
         <h1>Đăng nhập</h1>
 
         <form>
-          <h5>E-mail</h5>
-          <input
+          <h5 className="email_matkhau">E-mail</h5>
+          <input className="input__email"
             type="text"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
 
-          <h5>Mật khẩu</h5>
-          <input
+          <h5 className="email_matkhau">Mật khẩu</h5>
+          <input className="input__email"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}

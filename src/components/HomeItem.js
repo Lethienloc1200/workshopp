@@ -21,16 +21,15 @@ class HomeItem extends Component {
               <div className="row">
       
                 <div className="col-sm-6">
+                  
                     <p className="product__price">
                       
-                      <strong>{product.price}  vnd <small> </small></strong>
+                     {product.price}  vnd 
                      
                     </p>
                 </div>
-                <div className="col-sm-2">
-                </div>
-      
-                <div className="col-sm-4">
+              
+                <div className="col-sm-6">
                     <div className="product__rating">
                         <p>🌟🌟🌟🌟</p> 
                     </div>
@@ -42,7 +41,7 @@ class HomeItem extends Component {
             <img src={`${product.image}`} alt="" className="form__image scale-edit" />
             </Link>
             <Link to={`/product/${product.id}/detail`}>
-                 <a>Xem chi tiết</a>
+                 <a className="xemchitiet">Xem chi tiết</a>
            </Link>
             <button onClick={()=>this.onAddToCart(product)} className="hover__button" >
               Thêm vào giỏ

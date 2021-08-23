@@ -15,27 +15,27 @@ class ProductItem extends Component {
         var statusClass = product.status ? 'bg-primary rounded' : 'rounded bg-warning';
         return (
             <tr>
-                <td>{index + 1}</td> 
-                <td>{product.id}</td>
+                <td className="stt__STT">{index + 1}</td> 
+                <td className="stt__Ma">{product.id}</td>
                 <td className="stt__Ten"><b>{product.name}</b></td>
-                <td className="stt__Ten">{product.descript}</td>
-                <td className="www"><img className="stt__img" src= {`${product.image}`}  alt=""/> </td>
-                <td className="stt__Ten"><b>{product.price} vnd</b></td>
-                <td className="mx-autoo stt__Ten">
+                <td className="stt__MoTa">{product.descript}</td>
+                <td className="stt__HinhAnh"><img className="stt__img" src= {`${product.image}`}  alt=""/> </td>
+                <td className="stt__Gia"><b>{product.price} vnd</b></td>
+                <td className="mx-autoo stt__TrangThai">
                     <span className={`padding-10 ${statusClass}`}>
                         {statusName}
                     </span>
                 </td>
-                <td className="stt__Ten">
+                <td className="stt__HanhDong">
                     <Link
                         to={`/product/${product.id}/edit`}
-                        className="btn btn-success mr-10"
+                        
                     >
-                        Sửa
+                       <button className="btn btn-success  btn_edit mr-1"> Sửa</button>
                     </Link>
                     <button
                         type="button"
-                        className="btn btn-danger mx-2"
+                        className="btn btn-danger  btn_edit"
                         onClick={() => this.onDelete(product.id)}
                     >
                         Xóa

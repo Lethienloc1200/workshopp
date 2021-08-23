@@ -1,21 +1,14 @@
-.header {
+nav.heade__box {
     height: 60px;
-    display: flex;
     align-items: center;
-    background-color: #131921;
-    position: relative;
-    top: 0;
-    z-index: 100;
+    background-color: #131921 !important;
+
   }
-  li.nav-item.dropdown {
-    margin: 0px 11px;
-}
   .header__logo {
     width: 100px;
     height: 50px;
-    margin:  20px;
-    margin-top: 18px; color:green;
     transition: 0.3s;
+    margin: 20px;
   }
 
   
@@ -28,56 +21,49 @@
   .header__logo:hover {
     border-radius:2px;    box-shadow: 1px 1px 14px 8px #ffa6004d;
     transform: scale(1.03);
+    color: wheat;
   }
 
-  
   .header__searchInput {
     height: 25px;
     padding: 10px;
     border: none;
     width: 90%;
   }
-  
+ 
   .header__searchIcon {
-    border-radius: 2px;
+    border-radius: 5px;
     padding: 5px;
     height: 25px !important;
     background-color: #cd9042;
   }
-  .size-big{
-    background: red;
-    width: 65px;
-  }
-  
-  .header__optionLineOne {
-    font-size: 10px;
-  }
-  
-  .header__optionLineTwo {
-    font-size: 13px;
-    font-weight: 800;
-  }
-  
-  .header__optionBasket {
-    display: flex;
-    align-items: center;
-    color: white;
-  }
-  
-  .header__basketCount {
-    margin-left: 10px;
-    margin-right: 10px;
-  }
-  
-  .header__nav {
-    display: flex;
-    justify-content: space-evenly;
-  }
-  
-  .header__option {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10px;
-    margin-right: 10px;
-    color: white;
-  }
+
+div#my-nav {
+    flex: inherit;
+}
+li.nav-item {
+  margin: 0px 31px;
+
+}
+.quan__ly{
+  padding-top:18px ;
+
+}
+.gio__hang{
+  padding-top:18px ;
+}
+.gio__hang_text{
+  color: white;
+    font-size: 16px;
+}
+.gio__hang_text:hover{
+  color: #cd9042;
+}
+h4.quan__ly__text {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+}
+h4.quan__ly__text:hover {
+  color: #cd9042;
+}

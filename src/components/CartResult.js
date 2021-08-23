@@ -8,7 +8,7 @@ class CartResult extends Component {
         <div>
           <strong className="mr-3">Tổng tiền: </strong>
 
-          <strong>{this.showTotalAmount(cart)}$</strong>
+          <strong className="mr-3" >{this.showTotalAmount(cart)}$</strong>
         </div>
 
         <button type="button" className="bt__thanh_toan mt-3 hover__button ">
