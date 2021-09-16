@@ -1,14 +1,14 @@
 
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import "./css/App.css";
-// import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
-// import routes from "./routes";
+
 
 function App() {
 
   const [{}, dispatch] = useStateValue();
+  //dark àn light background
 
   useEffect(() => {
     // will only run once when the app component loads...
@@ -37,6 +37,7 @@ function App() {
 
   return (
       <div></div>
+
   );
 }
 

@@ -4,6 +4,9 @@ nav.heade__box {
     background-color: #131921 !important;
 
   }
+  nav.navbar.navbar-expand-lg.navbar-dark.bg-dark {
+    margin-top: 55px;
+}
   .header__logo {
     width: 100px;
     height: 50px;

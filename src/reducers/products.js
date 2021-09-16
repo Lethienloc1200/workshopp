@@ -2,6 +2,7 @@ import * as Types from "./../constants/ActionTypes";
 
 var initialState = [];
 
+
 var findIndex = (products, id) => {
   var result = -1;
   products.forEach((product, index) => {
@@ -13,6 +14,7 @@ var findIndex = (products, id) => {
 };
 
 const products = (state = initialState, action) => {
+
   var index = -1;
 
   var { id,product} = action;

@@ -1,14 +1,11 @@
 import React from "react";
 import NotFoundPage from "./pages/NotFoundPage/NotFoundPage";
-import Header from "./Header";
-// import Home from "./Home";
-import Footer from "./Footer";
-import Payment from "./Payment";
-// import Checkout from "./Checkout";
-import Login from "./Login";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import Login from "./components/Login";
+import Register from "./components/Register";
 import ProductListPage from "./pages/ProductListPage/ProductListPage";
 import ProductActionPage from "./pages/ProductActionPage/ProductActionPage";
-import ProductDetail from "./ProductDetail";
 import HomePage from "./pages/HomePage/HomePage";
 import ProductDetailPage from "./pages/ProductDetailPage/ProductDetailPage";
 import MessageContainer from './containers/MessageContainer';
@@ -44,7 +41,7 @@ const routes = [
     main: () => (
       <div>
         <Header />
-        <Payment />
+        {/* <Payment /> */}
         <Footer />
       </div>
     ),
@@ -67,6 +64,15 @@ const routes = [
     main: () => (
       <div>
        <Login/>
+      </div>
+    ),
+  },
+  {
+    path: "/Register",
+    exact: true,
+    main: () => (
+      <div>
+       <Register/>
       </div>
     ),
   },

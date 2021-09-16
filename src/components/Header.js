@@ -1,36 +1,33 @@
 // rfce//
 import React from "react";
-import "./css/Header.css";
-import { Route, Link } from "react-router-dom";
+import "../css/Header.css";
+import { Link } from "react-router-dom";
 import SearchIcon from "@material-ui/icons/Search";
 import AddShoppingCartIcon from "@material-ui/icons/AddShoppingCart";
-import { useStateValue } from "./StateProvider";
-import { auth } from "./firebase";
+import { useStateValue } from "../StateProvider";
+import { auth } from "../firebase";
 
 function Header() {
-  const [{ basket, user }, dispatch] = useStateValue();
+  const [{  user }] = useStateValue();
 
   const hanleAuthenticaton = () => {
     if (user) {
       auth.signOut();
     }
   };
-  // ============
-  const menus = [
-    {
-      name: "Trang chu",
-      to: "/",
-      exact: true,
-    },
-    {
-      name: "Product Management",
-      to: "/product-list",
-      exact: false,
-    },
-  ];
+  
+  const qlsp = user ? <Link to= "/QLSP">
+              <div className="quan__ly">
+                <h4 className="quan__ly__text">Quản lý </h4>
+              </div>
+            </Link> : <Link to= "/login">
+              <div className="quan__ly">
+                <h4 className="quan__ly__text">Quản lý </h4> 
+              </div>
+            </Link>
 
   return (
-    <div className="container">
+    <div className="container1">
       <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top menutren heade__box">
         <div class="container-fluid toogle-box ">
           <Link to="/">
@@ -53,14 +50,16 @@ function Header() {
           <div id="my-nav" class="collapse navbar-collapse">
             <ul class="navbar-nav float-sm-right menuphai">
               <li class="nav-item">
-                <Link to="/QLSP">
+                {/* <Link to= "/QLSP">
                   <div className="quan__ly">
                     <h4 className="quan__ly__text">Quản lý </h4>
                   </div>
-                </Link>
+                </Link> */}
+                {qlsp}
               </li>
               
               <li class="nav-item gio__hang">
+                
                 <Link to="/checkout">
                   <AddShoppingCartIcon />
                    <span className="gio__hang_text ml-1 ">Giỏ hàng</span>
@@ -94,10 +93,15 @@ function Header() {
       {/* ===============nav============ */}
       <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container-fluid">
-          <a className="navbar-brand" href="#">
+          <span className="  navbar-brand" type="button"
+            data-toggle="collapse"
+            data-target="#navbarNavDarkDropdown"
+            aria-controls="navbarNavDarkDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"  >
             Danh mục
-          </a>
-          <button
+          </span>
+          {/* <button
             className="navbar-toggler"
             type="button"
             data-toggle="collapse"
@@ -107,7 +111,7 @@ function Header() {
             aria-label="Toggle navigation"
           >
             <span className="navbar-toggler-icon"></span>
-          </button>
+          </button> */}
           <div className="collapse navbar-collapse" id="navbarNavDarkDropdown">
             <ul className="navbar-nav">
               <li className="nav-item dropdown">
@@ -125,7 +129,7 @@ function Header() {
                   className="dropdown-menu dropdown-menu-dark"
                   aria-labelledby="navbarDarkDropdownMenuLink"
                 >
-                  <li>
+                  <li >
                     <a className="dropdown-item" href="#">
                       i phone
                     </a>

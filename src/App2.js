@@ -1,78 +1,77 @@
-import React, { Component, useEffect } from "react";
+import React, { Component } from "react";
+import "./css/Dark.css";
 import "./css/App.css";
-import Header from "./Header";
-import Home from "./Home";
-import Checkout from "./Checkout";
-import Login from "./Login";
-import Footer from "./Footer";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import { auth } from "./firebase";
-import { useStateValue } from "./StateProvider";
-import Payment from "./Payment";
-import QuanLySP from "./components/ProductList";
-
 import routes from "./routes";
+import classNames from 'classnames';
 
 class App2 extends Component {
 
-  render(){
-    return (
-            <Router>
-              <div className="app">
-                <Switch>
-                  {/* <Route path="/login">
-                    <Login />
-                  </Route>
-        
-                  <Route path="/checkout">
-                    <Header />
-                    <Checkout />
-                    <Footer />
-                  </Route>
-        
-                  <Route path="/payment">
-                    <Header />
-                    <Payment />
-                    <Footer />
-                  </Route>
-                  <Route path="/QLSP">
-                    <Header />
-                    <QuanLySP />
-                  </Route>
-        
-                  <Route path="/">
-                    <Header />
-                    <Home />
-                    <Footer />
-                  </Route> */}
-                  
 
-                  {this.showContentMenus(routes)}
-        
-        
-                </Switch>
-              </div>
-            </Router>
-          );
+  state ={
+    darkMode: false,
   }
 
- showContentMenus = (routes) => {
-        var result = null;
-        if (routes.length > 0) {
-            result = routes.map((route, index) => {
-                return (
-                    <Route
-                        key={index}
-                        path={route.path}
-                        exact={route.exact}
-                        component={route.main}
-                    />
-                );
-            });
-        }
-        return <Switch>{result}</Switch>;
-    }
 
+ onSetDarkMode = () => {
+  this.setState(prevState => ({
+    darkMode: !prevState.darkMode
+  }));
+
+
+}
+
+
+  render() {
+
+    return (
+     
+      <Router>
+        <div className={`app ${this.state.darkMode ? "dark-mode" : "light-mode"}`}>
+          {/* classNames = this.state.darkMode ? "dark-mode" : "light-mode" */}
+            <div className="containerr mt-5">
+              <span style={{ color: this.state.darkMode ? "grey" : "yellow" }}>
+                ☀︎
+              </span>
+              <div className="switch-checkbox">
+                <label className="switch">
+                  <input type="checkbox" onChange={this.onSetDarkMode}/>
+                  <span className="slider round"> </span>
+                  
+                </label>
+              </div>
+              <span style={{ color: this.state.darkMode ? "#c96dfd" : "grey" }}>
+                ☽
+              </span>
+          
+           
+          </div>
+          <Switch>
+        
+
+            {this.showContentMenus(routes)}
+          </Switch>
+        </div>
+      </Router>
+    );
+  }
+
+  showContentMenus = (routes) => {
+    var result = null;
+    if (routes.length > 0) {
+      result = routes.map((route, index) => {
+        return (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={route.main}
+          />
+        );
+      });
+    }
+    return <Switch>{result}</Switch>;
+  };
 }
 
 export default App2;

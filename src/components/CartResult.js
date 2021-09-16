@@ -5,6 +5,10 @@ class CartResult extends Component {
     var { cart } = this.props;
     return (
       <div className="col-sm-7 mt-3 thanh_toan_box">
+        <div className="mb-5">
+          <strong className="mr-3">Địa chỉ giao hàng</strong>
+          <p className="mr-3" > 526 An Dương Vương-Trường DH Quy Nhơn</p>
+        </div>
         <div>
           <strong className="mr-3">Tổng tiền: </strong>
 

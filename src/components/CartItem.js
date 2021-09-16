@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import * as Message from './../constants/Message';
-// import './css/CheckoutProduct.css';
+import '../css/CheckoutProduct.css';
 
 
 class CartItem extends Component{

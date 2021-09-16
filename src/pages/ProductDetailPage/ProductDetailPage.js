@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-// import callApi from "../../utils/apiCaller";
-// import { Route, Link } from "react-router-dom";
 import {
   actAddProductRequest,
-  actGetProductRequest,actAddToCart
+  actGetProductRequest,actAddToCart, actChangeMessage
 } from "./../../actions/index";
 import { connect } from "react-redux";
-// import HomeItem from "../../components/HomeItem";
-// import HomePage from "../HomePage/HomePage";
+import "../../css/ProductDetail.css";
+import * as Message from '../../constants/Message';
 
 
 class ProductDetail extends Component {
@@ -20,6 +18,7 @@ class ProductDetail extends Component {
       txtImage: "",
       txtPrice: "",
       chkbStatus: "",
+    
     };
   }
 
@@ -41,17 +40,26 @@ class ProductDetail extends Component {
         txtImage: itemEditing.image,
         txtPrice: itemEditing.price,
         chkbStatus: itemEditing.status,
-      });
+        
+      }); 
     }
   }
+ 
+  render() { 
 
-  render() {
-    var { txtName, txtPrice, txtDescription, txtImage, chkbStatus } =
-      this.state;
+    var { txtName, txtPrice, txtDescription, txtImage, chkbStatus } = this.state;
     var statusName = chkbStatus ? "Còn Hàng" : "Hết Hàng";
-  var { product } = this.props;
+    var { itemEditing } = this.props;
+  
+        
+   
     return (
       <div>
+     
+        {/* { product.image}
+        { product.price}
+        { product.descript}
+        { product.name} */}
         <div className="container-fluid mt-5 mb-5">
           <div className="row mb-5">
             <h1 className="mx-auto">Chi tiết sản phẩm</h1>
@@ -75,8 +83,9 @@ class ProductDetail extends Component {
               <div className="card-right">
                 <div className="row">
                   <div className="col-sm-5 about">
-                    <span className="font-weight-bold-name ">{txtName}</span>
-                    <h4 className="font-weight-bold mt-3">{txtPrice} vnd</h4>
+                    <span className="font-weight-bold-name nho  ">{txtName}</span>
+     
+                    <h4 className="font-weight-bold color-price mt-3 ml-2">{txtPrice} vnd</h4>
                   </div>
                   <div className="col-sm-1"></div>
                   <div className="col-sm-3">
@@ -89,7 +98,7 @@ class ProductDetail extends Component {
 
                 <div className="buttons ">
                   <button className="btn btn-info add__basket"
-                      onClick={()=>this.onAddToCart()}>
+                       onClick={()=>this.onAddToCart(itemEditing)}>
                     Thêm vào giỏ hàng
                   </button>
                   <button className="btn btn-info add__basket ml-2 mr-5 ">
@@ -101,12 +110,14 @@ class ProductDetail extends Component {
                 </div>
                 <hr />
                 {/* //======Mô tả sản phẩm */}
-                <h4>Trạng thái </h4>
-                <h5 className="margin-left-50">{statusName}</h5>
+                <div className="product-description mt-3 mb-3">
+                <span className="font-weight-bold nho">Trạng thái: </span>
+                <span className="font-weight-bold nho">{statusName}</span>
+                </div>
                 <div className="product-description">
                   <div>
-                    <span className="font-weight-bold">Color:</span>
-                    <span> blue</span>
+                    <span className="font-weight-bold nho">Color:</span>
+                    <span className="font-weight-bold nho"> blue</span>
                   </div>
                   <div className="my-color">
                     <label className="radio">
@@ -133,11 +144,11 @@ class ProductDetail extends Component {
                   </div>
                   <div className="d-flex flex-row align-items-center">
                     <i className="fa fa-calendar-check-o" />
-                    <span className="ml-1">Giao hàng ở nội thành freeShip</span>
+                    <span className=" font-weight-bold-ship nho  ml-1">Giao hàng ở nội thành freeShip</span>
                   </div>
                   <div className="mt-2">
-                    <span className="font-weight-bold">Mô tả sản phẩm</span>
-                    <p>{txtDescription}</p>
+                    <span className="font-weight-bold nho">Mô tả sản phẩm</span>
+                    <p className="p-nho">{txtDescription}</p>
                   </div>
                 </div>
               </div>
@@ -221,36 +232,36 @@ class ProductDetail extends Component {
            
             <div className="col-sm-7">
             <div className="card mt-2 cac_san_pham_lien_quan">
-                <span>Các sản phẩm liên quan</span>
+                <span className="font-weight-bold-ship">Các sản phẩm liên quan</span>
 
                 <div className="similar-products mt-2 d-flex flex-row">
                   <div className="card border p-1">
-                    <img src="https://i.imgur.com/KZpuufK.jpg" alt="..." />
+                    <img className=" product-dif" src="https://i.imgur.com/KZpuufK.jpg" alt="..." />
 
                     <h6 className="card-title">799000000 vnd</h6>
                   </div>
                   <div className="card border p-1">
-                    <img src="https://m.media-amazon.com/images/I/71LJJrKbezL._AC_UL480_FMwebp_QL65_.jpg" alt="..." />
+                    <img className=" product-dif" src="https://m.media-amazon.com/images/I/71LJJrKbezL._AC_UL480_FMwebp_QL65_.jpg" alt="..." />
 
                     <h6 className="card-title">456000000 vnd</h6>
                   </div>
                   <div className="card border p-1">
-                    <img src="https://m.media-amazon.com/images/I/71Ao8Im97TL._AC_UL480_FMwebp_QL65_.jpg" alt="..." />
+                    <img className=" product-dif" src="https://m.media-amazon.com/images/I/71Ao8Im97TL._AC_UL480_FMwebp_QL65_.jpg" alt="..." />
 
                     <h6 className="card-title">8529000000 vnd</h6>
                   </div>
                   <div className="card border p-1">
-                    <img src="https://m.media-amazon.com/images/I/81Vtb-0K3-L._AC_UY327_FMwebp_QL65_.jpg" alt="..." />
+                    <img className=" product-dif" src="https://m.media-amazon.com/images/I/81Vtb-0K3-L._AC_UY327_FMwebp_QL65_.jpg" alt="..." />
 
                     <h6 className="card-title">763000000 vnd</h6>
                   </div>
                   <div className="card border p-1">
-                    <img src="https://m.media-amazon.com/images/I/51q7Td1wWUL._AC_UY327_FMwebp_QL65_.jpg" alt="..." />
+                    <img className=" product-dif" src="https://m.media-amazon.com/images/I/51q7Td1wWUL._AC_UY327_FMwebp_QL65_.jpg" alt="..." />
 
                     <h6 className="card-title">159000000 vnd</h6>
                   </div>
                   <div className="card border p-1">
-                    <img src="https://m.media-amazon.com/images/I/71URNvzoWqL._AC_UY327_FMwebp_QL65_.jpg" alt="..." />
+                    <img className=" product-dif" src="https://m.media-amazon.com/images/I/71URNvzoWqL._AC_UY327_FMwebp_QL65_.jpg" alt="..." />
 
                     <h6 className="card-title">79789000000 vnd</h6>
                   </div>
@@ -263,12 +274,17 @@ class ProductDetail extends Component {
       </div>
     );
   }
+  onAddToCart=(itemEditing)=>{
+    this.props.onAddToCart(itemEditing);
+    this.props.onChangeMessage(Message.MSG_ADD_TO_CART_SUCCESS);
+  }
 
 }
 
 const mapStateToProps = (state) => {
-  return {
-    itemEditing: state.itemEditing,
+  return { 
+    itemEditing: state.itemEditing
+   
   };
 };
 
@@ -280,6 +296,12 @@ const mapDispatchToProps = (dispatch, props) => {
     onEditProduct: (id) => {
       dispatch(actGetProductRequest(id));
     },
+    onAddToCart: (product) => {
+      dispatch(actAddToCart(product, 1));
+    },
+    onChangeMessage : (message) => {
+        dispatch(actChangeMessage(message));
+    }
 
 
   };

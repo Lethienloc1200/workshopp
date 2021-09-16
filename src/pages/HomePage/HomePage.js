@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import HomeList from '../../components/HomeList';
 import HomeItem from "../../components/HomeItem" 
 import {connect} from 'react-redux';
-// import {Link } from "react-router-dom";
 import  {actFetchProductsRequest} from '../../actions/index';
 import { actAddToCart, actChangeMessage } from '../../actions/index';
 
@@ -11,19 +10,15 @@ class HomePage extends Component {
     componentDidMount() {
         this.props.fetchAllProducts();
     }
-
     render() {
-
+        
         var { products }  = this.props;
-
         return (
-         
            <div className="">
                <HomeList >
                    {this.showProducts(products)}
                </HomeList>
            </div>
-     
         );
     }
     showProducts(products){

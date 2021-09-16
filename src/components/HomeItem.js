@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import "../css/HomeItem.css"
+import "../css/HomeItem.css";
+import "../css/Home.css";
+import "../css/Product.css";
 import * as Message from './../constants/Message';
-
+import classNames from 'classnames';
 
 class HomeItem extends Component {
 
@@ -11,11 +13,12 @@ class HomeItem extends Component {
     render() {
         var { product } = this.props;
 
-     
+      
         return (
             <div className="width__product">
             {/* // =========Home item========= */}
-            <div className="product efect-image">
+            {/* <div className="product efect-image"> */}
+            <div className={`${classNames} product efect-image`}>
             <div className="product__info">
               <p>{product.name}</p>
               <div className="row">

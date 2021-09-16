@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import "../css/Checkout.css";
-import TongCong from "../TongCong";
 // import CartItem from "./CartItem";
 
 class Cart extends Component {
@@ -11,9 +10,7 @@ class Cart extends Component {
       <div className="checkout">
         <div className="container-fluid cart-edit">
          
-              {/* <h2 className="btn btn-primary mx-3 my-3">
-                <b>hé lô</b>
-              </h2> */}<p className="mt-3 mb-3">...</p>
+             <p className="mt-3 mb-3">...</p>
             <div className="GioHangCuaBan ">
              
               <h2 className="GioHang"> Giỏ hàng của bạn</h2>

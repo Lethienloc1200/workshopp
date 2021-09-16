@@ -95,7 +95,7 @@ label.radio input:checked+span::before {
     padding: 0.3rem 0.3rem 0.2rem
 }
 span.font-weight-bold-name {
-    font-size: 35px;
+    font-size: 30px;
     font-weight: 700;
 }
 
@@ -107,10 +107,11 @@ span.font-weight-bold-name {
 .margin-left-50{
     margin-left: 50px;
 }
-.add__basket{
+.add__basket {
     background: #f0c14b;
     border: 1px solid;
     margin-top: 10px;
+    width: 168px;
     border-color: #a88734 #9c7e31 #846a29;
     color: #111;
 }
@@ -129,4 +130,30 @@ img.width-image {
   }
   .demo {
     margin-top: 70px;
+}
+img.product-dif {
+    width: 200px;
+    height: 140px;
+    padding: 7px;
+    object-fit: cover;
+    /* margin: -9px; */
+}
+span.username {
+    font-size: 20px;
+    padding-left: 7px;
+    font-weight: 600;
+}
+.font-weight-bold {
+    font-weight: 700!important;
+    font-size: 20px;
+}
+.font-weight-bold-ship {
+    font-weight: 500;
+    font-size: 20px;
+}
+.color-price{
+    color: red;
+}
+i.fa.fa-star {
+    color: #ffb000;
 }

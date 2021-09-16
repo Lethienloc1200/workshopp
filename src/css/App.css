@@ -48,6 +48,7 @@ form.border.border-primary.rounded.form-edit {
     margin: 0;
   } /*để sửa trong chome cho nhanh*/
  /* ======header=== */
+
   img.header__logo {
     width: 50px;
     height: 25px;
@@ -74,13 +75,41 @@ h4.quan__ly__text {
   font-size: 10px !important;
  
 }
+
+ul.dropdown-menu.dropdown-menu-dark.show {
+  width: 169px;
+  height: 111px;
+  background: gray;
+  /* color: white !important; */
+}
+
  /* =====hết header=== */
+ .home__image {
+  width: 100% ;
+  z-index: -1;
+  margin-bottom: -300px;
+  /* mask-image: none !important; */
+}
+ .carousel-inner {
+  position: relative;
+  width: 100%;
+  margin-bottom: 65px;
+  overflow: visible;
+}
  div.width__product {
   display: inline-block;
   width: 46%;
   padding: 0px;
   margin: 0px;
   margin-right: 5px;
+  position: relative;
+  z-index: 10;
+}
+a.carousel-control-prev {
+  margin-top: 11%;
+}
+a.carousel-control-next {
+  margin-top: 11%;
 }
 .header__searchInput {
 
@@ -122,6 +151,65 @@ a.xemchitiet {
  height: 52px !important;
 
 }
+
+
+/* ============dark button */
+.switch {
+  width: 20px !important;
+  top: 7px;
+  height: 9px !important;
+}
+.slider:before {
+  height: 11px !important;
+  width: 11px !important;
+  bottom: -1px !important;
+  
+}
+input:checked + .slider:before {
+  transform: translateX(8px) !important;
+}
+span {
+  font-size: 15px !important;
+}
+.containerr {
+  top:12px !important;
+  width: 100px !important;
+  height: 20px !important;
+}
+/* ============ het dark button */
+
+/* ==============detai;========== */
+
+img.product-dif {
+  width: 42px !important;
+  height: 40px !important;
+  padding: 0px !important;
+
+}
+.card.mt-2.cac_san_pham_lien_quan {
+  padding: 0px;
+}
+h6.card-title {
+  font-size: 9px;
+  margin-top: 10px;
+}
+.row.mb-5 {
+  /* margin: 0 !important; */
+  margin-top: -118px;
+  visibility: hidden;
+}
+.btn-info.add__basket {
+
+  font-size: 10px;
+  width: 114px;
+
+}
+button.btn.btn-light.wishlist.ml-5 {
+  margin-left: 290px !important;
+  background: #ff4868;
+  margin-top: -60px;
+}
+/* ==============het detai;========== */
 /* ===============footer============ */
 h5.headin5_amrc.col_white_amrc.pt2 {
   font-size: 12px;
@@ -200,6 +288,15 @@ footer p {
 .container-fluid.cart-edit {
   padding: 0px;
 }
+span.nho {
+  font-size: 12px !important;
+}
+.p-nho {
+  font-size: 12px !important;
+}
+.card.mt-2.danh__gia {
+  font-size: 8px !important;
+}
 .GioHangCuaBan {
   padding: 0px !important;
 }
@@ -244,6 +341,15 @@ h2.GioHang {
 }
 span.badge.amber.darken-2 {
   font-size: 13px;
+}
+span.badge {
+  font-size: 10px !important;
+}
+span.username {
+  font-size: 10px !important;
+}
+.date span {
+  font-size: 9px !important;
 }
 
 /* ======login======= */

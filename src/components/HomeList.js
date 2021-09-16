@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import "../css/HomeList.css"
+import "../css/HomeList.css";
+import "../css/Home.css";
 
 // import HomeItem from "../../components/HomeItem" 
 

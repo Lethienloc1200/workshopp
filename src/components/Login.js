@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import "./css/Login.css";
+import "../css/Login.css";
 import { Link, useHistory } from "react-router-dom";
-import { auth } from "./firebase";
+import { auth } from "../firebase";
 
 
 function Login() {
@@ -29,6 +29,7 @@ function Login() {
       .then((auth) => {
         if (auth) {
           //nếu nó thành coong tạo ra người dùng với email và pass
+          alert('đăng kí thành công')
           history.push("/");
         }
       })
@@ -73,10 +74,11 @@ function Login() {
         <p>
   
         </p>
-
-        <button className="login__registerButton" onClick={register}>
+        <Link to ="/register">  
+        <h5 className="login__registerButton">
           Tạo một tài khoản
-        </button>
+        </h5>
+        </Link>
       </div>
     </div>
   );
